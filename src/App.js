@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 
 function App() {
-  const result = "asd";
+  const result = "";
   useEffect(() => {
-    fetch("/").then((resp) =>
-      resp.json().then((data) => {
-        console.log(data);
-      })
-    );
+    fetch("/api")
+      .then((resp) => resp.json())
+      .then((data) => {
+        console.log(data["title"]);
+      });
   });
   return (
     <div>
