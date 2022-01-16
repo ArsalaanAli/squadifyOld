@@ -1,18 +1,18 @@
-import React, { useEffect } from "react";
-
+import React, { useEffect, useState } from "react";
+import FrontPage from "./Pages/FrontPage";
 function App() {
-  const result = "";
+  const [result, setResult] = useState("");
   useEffect(() => {
     fetch("/api")
       .then((resp) => resp.json())
       .then((data) => {
         console.log(data["title"]);
+        setResult(data["title"]);
       });
   });
   return (
     <div>
-      <h1>hello</h1>
-      <h1>{result}</h1>
+      <FrontPage />
     </div>
   );
 }
