@@ -1,5 +1,6 @@
 import React from "react";
 import "./FrontPage.css";
+import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function FrontPage() {
